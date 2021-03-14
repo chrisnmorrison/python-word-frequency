@@ -11,6 +11,7 @@ def count_words(filename):
 
 def most_common_words_in_file(filename, n):
     counts = count_words(filename)
+    print(f"\n{filename} file contains {len(counts)} unique words.\n")
     for word, count in [['Word', 'Count']] + counts.most_common(n):
         print(f'{word:>15} {count:>6}')
 
